@@ -1,10 +1,9 @@
 {
-  "name": "my-app",
+  "name": "hello-app",
   "version": "1.0.0",
-  "description": "My first Node.js application",
+  "description": "My first Node.js app",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"No tests yet\""
+    "start": "node index.js"
   }
 }
