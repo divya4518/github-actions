@@ -1,0 +1,11 @@
+{
+  "name": "My First Project",
+  "version": "1.0.0",
+  "isActive": true,
+  "author": "John Doe",
+  "languages": ["JavaScript", "Python"],
+  "config": {
+    "port": 3000,
+    "environment": "development"
+  }
+}
