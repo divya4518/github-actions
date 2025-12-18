@@ -1,0 +1,25 @@
+name: test with multiple OS
+on:
+  push:
+    branches:
+      - "*"
+
+jobs:
+  test-job:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node-version: [16, 17, 18]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - run : node -v
+      - run : echo "running on ${{ matrix.os }} with Node.js ${{ matrix.node-version }}"
+      - run : echo "current runner OS ${{ matrix.os }}, node version ${{ matrix.node-version }}"
