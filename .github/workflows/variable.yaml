@@ -7,10 +7,10 @@ jobs:
   print-variables:
     runs-on: ubuntu-latest
     env:
-      name: "divya"
+      owner: "divya"
     steps:
       - name: Print variable values
         run: |
-          echo "This is ${{name}}"
+          echo "This is ${{ env.owner }}"     
           echo "You can add more steps to utilize variables as needed."
     
