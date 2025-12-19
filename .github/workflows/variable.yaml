@@ -1,0 +1,16 @@
+name: variables
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  print-variables:
+    runs-on: ubuntu-latest
+    env:
+      name: "divya"
+    steps:
+      - name: Print variable values
+        run: |
+          echo "This is ${{name}}"
+          echo "You can add more steps to utilize variables as needed."
+    
